@@ -26,6 +26,7 @@ $(document).ready(function () {
         let moving = image.attr("data-moving")
         let still = image.attr("data-still")
         let state = image.attr("data-state")
+
         if (state == "still") {
             image.attr("src", moving)
             image.attr("data-state", "moving")
@@ -49,13 +50,14 @@ $(document).ready(function () {
             const data = response.data;
             data.forEach(element => {
                 console.log(element)
-                var gif = element.images.fixed_width_still.url;
+                var gif = element.images.fixed_width.url
                 var showGif = $("<img>").attr("src", gif);
-                showGif.attr("data-still", gif)
                 showGif.attr("data-moving", element.images.fixed_width.url)
-                showGif.attr("data-state", "still")
+                showGif.attr("data-still", element.images.fixed_width_still.url);
+                showGif.attr("data-state", "moving")
                 $('.gif').prepend(showGif)
             });
         });
     });
 });
+

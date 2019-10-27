@@ -3,23 +3,23 @@ body{
     font-family: 'Francois One', sans-serif;
 
 }
-header{
-    height: 10vh;
-}
+
 main{
-    height: 80vh;
+    height: 95vh;
+    width: 80%;
+    margin: auto;
     
 }
-
-#about{
-    height:20%;
-    display: flex;
-    justify-content: center;
-    align-items:flex-end;
+.box{
+    padding: 20px;
 }
+
+
 h1{
     text-align: center;
+    margin: 0;
     color: #487eb0;
+    font-size: 80px;
 }
 #search_Submit{
     background-color:  #487eb0;
@@ -36,6 +36,7 @@ form{
     
 }
 .tag{
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,10 +44,13 @@ form{
 
 }
 .btn{
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color:  #192a56;
+    color: #fa983a;
 }
 
 
 footer{
-    height: 10vh;
+    height: 5vh;
 }
