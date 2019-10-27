@@ -13,7 +13,8 @@ $(document).ready(function () {
         b.addClass("btn");
         b.attr("data-name", searchText);
         searchArray.push(searchText)
-        $(".result").append(b)
+        $(".tag").append(b)
+        $('#gif_Search').val('');
     });
 
 
@@ -38,7 +39,7 @@ $(document).ready(function () {
     $(document).on('click', ".btn", function (event) {//this is for dynamic html listene
         //$('.btn').on('click', function (j) {//this is for static html listene
         event.preventDefault();
-        $('.gif_Container').empty();
+        $('.gif').empty();
         const searchText = $(this).attr("data-name")
         const queryUrl = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${searchText}&limit=10&offset=0&rating=G&lang=en`;
         $.ajax({
@@ -53,7 +54,7 @@ $(document).ready(function () {
                 showGif.attr("data-still", gif)
                 showGif.attr("data-moving", element.images.fixed_width.url)
                 showGif.attr("data-state", "still")
-                $('.gif_Container').prepend(showGif)
+                $('.gif').prepend(showGif)
             });
         });
     });

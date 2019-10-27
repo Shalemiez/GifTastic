@@ -1,0 +1,52 @@
+body{
+    background-color: #192a56;
+    font-family: 'Francois One', sans-serif;
+
+}
+header{
+    height: 10vh;
+}
+main{
+    height: 80vh;
+    
+}
+
+#about{
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+h1{
+    text-align: center;
+    color: #487eb0;
+}
+#search_Submit{
+    background-color:  #487eb0;
+    color: #192a56;
+    border: 0;
+    height: 20px;
+    margin-left: 5px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.btn{
+    margin-left: 10px;
+}
+
+
+footer{
+    height: 10vh;
+}
